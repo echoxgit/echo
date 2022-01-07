@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--Window setup-->
+    <link rel="icon" href="assets/imgs/My_Post_Copy_22.png" type="image/png" />
+    <title>EchoX</title>
+    <!--CSS file-->
+    <link rel="stylesheet" href="assets/css/style.css" type="text/css" />
+    <!--Font & icons-->
+    <link
+      href="http://fonts.googleapis.com/css?family=Montserrat:400,700"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+      integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+      crossorigin="anonymous"
+    />
+    <!--JS file-->
+    <!-- <link rel="script" href="assets/js/script.js" type="text/javascript"/>-->
+    <!--Embed-->
+  </head>
+
+  <body>
+    <section class="navbar">
+      <div class="container">
+        <header>
+          <div class="logo">
+            <img src="assets/imgs/My_Post_Copy_22.png" alt="" />
+          </div>
+          <nav>
+            <div class="header_links">
+              <ul class="nav_links">
+                <li class="nav_link">
+                  <a href="#"><i class="fas fa-home"></i></a>
+                  <span class="tooltip1">Home</span>
+                </li>
+                <li class="nav_link">
+                  <a href="download.html"><i class="fas fa-download"></i></a>
+                  <span class="tooltip2">Download</span>
+                </li>
+                <li class="nav_link">
+                  <a href="contact"><i class="fas fa-id-card-alt"></i></a>
+                  <span class="tooltip3">Contact</span>
+                </li>
+              </ul>
+            </div>
+            <div class="toggle">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                xmlns="http://www.w3.org/2000/svg"
+                class="w-5 h-5 text-gray-800 dark:text-gray-200"
+              >
+                <path
+                  class="path"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
+                ></path>
+              </svg>
+            </div>
+          </nav>
+        </header>
+      </div>
+    </section>
+
+    <section class="main">
+      <div class="container">
+        <div class="box">
+          <div class="title">
+            <span class="block"></span>
+            <h1>EchoX<span></span></h1>
+          </div>
+          <div class="role">
+            <p>free open-source tweaking utility</p>
+          </div>
+          <div class="image">
+            <img class="img" src="assets/imgs/kBYQ0280.png" alt="" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      const navbar = document.querySelector(".navbar");
+      const main = document.querySelector(".main");
+      const toggle = document.querySelector(".toggle");
+      const path = document.querySelector(".path");
+      const img = document.querySelector(".img");
+      toggle.addEventListener("click", () => {
+        navbar.classList.toggle("dark");
+        main.classList.toggle("dark");
+        if (navbar.classList.contains("dark")) {
+          path.setAttribute(
+            "d",
+            "M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"
+          );
+          img.setAttribute("src", "assets/imgs/cfzp59aP.png");
+        } else {
+          path.setAttribute(
+            "d",
+            "M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
+          );
+          img.setAttribute("src", "assets/imgs/kBYQ0280.png");
+        }
+      });
+    </script>
+  </body>
+</html>
