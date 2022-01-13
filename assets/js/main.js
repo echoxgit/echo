@@ -64,10 +64,11 @@ for (let i = 0; i < toggles.length; i++) {
   });
 }
 
-window.onload = function () {
-  window.location.href = window.location.origin + "/echo/#";
-  window.location.reload;
-};
+// window.onload = function () {
+//   window.location.href = window.location.origin + "/echo/#";
+//   window.location.reload;
+
+// };
 
 const mainMenu = document.querySelector(".mainMenu");
 const closeMenu = document.querySelector(".closeMenu");
