@@ -65,7 +65,7 @@ for (let i = 0; i < toggles.length; i++) {
 }
 
 window.onload = function () {
-  window.location.href = window.location.origin + "echo/#";
+  window.location.href = window.location.origin + "/echo/#";
   window.location.reload;
 };
 
