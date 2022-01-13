@@ -9,7 +9,7 @@
     <title>EchoX</title>
     <!--CSS file-->
     <link rel="stylesheet" href="assets/css/style.css" type="text/css" />
-    <!--Font & icons-->
+    <!--Loaders-->
     <link
       href="http://fonts.googleapis.com/css?family=Montserrat:400,700"
       rel="stylesheet"
@@ -21,13 +21,19 @@
       integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
       crossorigin="anonymous"
     />
+
     <!--JS file-->
     <!-- <link rel="script" href="assets/js/script.js" type="text/javascript"/>-->
     <!--Embed-->
+
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"
+    ></script>
   </head>
 
   <body>
-    <section class="navbar">
+    <section class="navbar" id="main">
       <div class="container">
         <header>
           <div class="logo">
@@ -41,12 +47,16 @@
                   <span class="tooltip1">Home</span>
                 </li>
                 <li class="nav_link">
-                  <a href="download.html"><i class="fas fa-download"></i></a>
-                  <span class="tooltip2">Download</span>
+                  <a href="#features"><i class="fas fa-clipboard-list"></i></a>
+                  <span class="tooltip2">Features</span>
                 </li>
                 <li class="nav_link">
-                  <a href="contact"><i class="fas fa-id-card-alt"></i></a>
-                  <span class="tooltip3">Contact</span>
+                  <a href="#faq"><i class="fas fa-question"></i></a>
+                  <span class="tooltip3">Questions</span>
+                </li>
+                <li class="nav_link">
+                  <a href="download.html"><i class="fas fa-download"></i></a>
+                  <span class="tooltip3">Download</span>
                 </li>
               </ul>
             </div>
@@ -67,6 +77,22 @@
                 ></path>
               </svg>
             </div>
+
+            <!-- <button class="navbar-toggler collapsed">
+              <span class="toggler-icon"></span>
+              <span class="toggler-icon"></span>
+              <span class="toggler-icon"></span>
+            </button> -->
+            <section class="hamburger">
+              <div class="openMenu"><i class="fas fa-bars"></i></div>
+              <ul class="mainMenu" style="display: flex; top: -100%">
+                <li><a href="#">Home</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#faq">Questions</a></li>
+                <li><a href="download.html">Download</a></li>
+                <div class="closeMenu"><i class="fas fa-times"></i></div>
+              </ul>
+            </section>
           </nav>
         </header>
       </div>
@@ -89,29 +115,131 @@
       </div>
     </section>
 
-    <script>
-      const navbar = document.querySelector(".navbar");
-      const main = document.querySelector(".main");
-      const toggle = document.querySelector(".toggle");
-      const path = document.querySelector(".path");
-      const img = document.querySelector(".img");
-      toggle.addEventListener("click", () => {
-        navbar.classList.toggle("dark");
-        main.classList.toggle("dark");
-        if (navbar.classList.contains("dark")) {
-          path.setAttribute(
-            "d",
-            "M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"
-          );
-          img.setAttribute("src", "assets/imgs/cfzp59aP.png");
-        } else {
-          path.setAttribute(
-            "d",
-            "M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
-          );
-          img.setAttribute("src", "assets/imgs/kBYQ0280.png");
-        }
-      });
-    </script>
+    <section class="features" id="features">
+      <div class="container">
+        <div class="row">
+          <div class="title">
+            <h3>Features</h3>
+            <h2>Here's What We Have To Offer</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="feature-box">
+            <div class="single-feature">
+              <i class="fas fa-money-bill-wave"></i>
+              <h3>Free</h3>
+              <p>
+                EchoX is 100% free, meaning that you won't need to pay to get
+                access.
+              </p>
+            </div>
+          </div>
+          <div class="feature-box">
+            <div class="single-feature">
+              <i class="fas fa-lock-open"></i>
+              <h3>Open-source</h3>
+              <p>
+                EchoX has an open-source code for those who want to understand
+                how it works and learn about its language.
+              </p>
+            </div>
+          </div>
+          <div class="feature-box">
+            <div class="single-feature">
+              <i class="fas fa-cog"></i>
+              <h3>Custom Settings</h3>
+              <p>
+                The program provides custom settings for your computer and
+                personal preference, so you can have the best experience.
+              </p>
+            </div>
+          </div>
+          <div class="feature-box">
+            <div class="single-feature">
+              <i class="fas fa-wrench"></i>
+              <h3>Frequent Updates</h3>
+              <p>
+                We provide very frequent updates, meaning if we discover a bug
+                it won't take long until It's fixed.
+              </p>
+            </div>
+          </div>
+          <div class="feature-box">
+            <div class="single-feature">
+              <i class="fas fa-comment-alt"></i>
+              <h3>Fast Support</h3>
+              <p>
+                Our support team is always available and ready to help you when
+                needed. Join our<a href="https://discord.com/invite/dptDHp9p9k"
+                  ><span> Discord</span></a
+                >
+                and open a ticket if you need any kind of help regarding echo.
+              </p>
+            </div>
+          </div>
+          <div class="feature-box">
+            <div class="single-feature">
+              <i class="fas fa-shield-alt"></i>
+              <h3>Secure</h3>
+              <p>
+                We provide a fully safe app, meaning that it won't prejudicate
+                the customer if used correctly.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq" id="faq">
+      <div class="container">
+        <div class="row">
+          <div class="title">
+            <h3>FAQ</h3>
+            <h2>Frequently Asked Questions</h2>
+            <p>Here are some common questions people ask us.</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="accordion">
+            <div class="accordion-item">
+              <button class="accordion-button collapse" type="button">
+                <span class="title">
+                  <span class="number">1</span>
+                  Lorem ipsum dolor sit amet.
+                  <i class="fas fa-plus"></i>
+                </span>
+              </button>
+              <div class="accordion-collapse collapse">
+                <div class="accordion-body">
+                  <p>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    Architecto cumque ex enim adipisci dolor laborum.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <button class="accordion-button collapse" type="button">
+                <span class="title">
+                  <span class="number">2</span>
+                  Lorem ipsum dolor sit amet.
+                  <i class="fas fa-plus"></i>
+                </span>
+              </button>
+              <div class="accordion-collapse collapse">
+                <div class="accordion-body">
+                  <p>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    Architecto cumque ex enim adipisci dolor laborum.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="assets/js/main.js"></script>
   </body>
 </html>
