@@ -72,9 +72,9 @@ header {
     flex-direction: row;
     text-align: center;
     justify-content: center;
-    animation: fadeInDown 0.8s;
 
     .header_links {
+      animation: fadeInDown 0.8s;
       .nav_links {
         margin-top: 15px;
         display: flex;
@@ -157,6 +157,9 @@ header {
     cursor: pointer;
     margin-top: 15px;
     margin-right: 30px;
+    animation: opacity 2s;
+    animation-delay: 0.3s;
+    opacity: 1;
   }
 
   .hamburger {
@@ -169,7 +172,7 @@ header {
     .openMenu {
       position: absolute;
       top: 20px;
-      right: 20px;
+      right: -70px;
       width: 28px;
       height: 28px;
       border-radius: 40%;
@@ -332,7 +335,7 @@ section.main {
         p {
           border-right: 2px solid #00000000;
           white-space: nowrap;
-          line-height: 35px;
+          line-height: 25px;
           margin-left: 0px;
           position: relative;
           overflow: hidden;
@@ -343,8 +346,6 @@ section.main {
           font-size: 12px;
           text-transform: uppercase;
           letter-spacing: 5px;
-          animation: typewriter 2s steps(50) 1s normal both,
-            blinkTextCursor 1s steps(50) infinite normal;
           animation-delay: 1.8s;
         }
       }
@@ -760,13 +761,38 @@ section.dark {
       }
 
       .toggle {
-        margin-right: 50px;
+        margin-right: -55px;
       }
     }
   }
+  section.main {
+    width: 100%;
+    .container {
+      .title {
+        margin-left: 50px;
+      }
+      .box {
+        .role {
+          p {
+            margin-left: 112.5px;
+            animation: typewriterMobile 2s steps(50) 1s normal both,
+              blinkTextCursor 1s steps(50) infinite normal;
+            animation-delay: 1.8s;
+            font-size: 10px;
+          }
+        }
 
+        .image {
+          img {
+            height: 70%;
+            margin-left: 0px;
+          }
+        }
+      }
+    }
+  }
   section.features {
-    height: 2300px;
+    height: 2350px;
 
     .container {
       .row {
@@ -795,6 +821,19 @@ section.dark {
     }
   }
 
+  section.main {
+    .container {
+      .box {
+        .role {
+          p {
+            animation: typewriter 2s steps(50) 1s normal both,
+              blinkTextCursor 1s steps(50) infinite normal;
+            animation-delay: 1.8s;
+          }
+        }
+      }
+    }
+  }
   section.features {
     height: 1000px;
 
@@ -831,14 +870,23 @@ section.dark {
 
 @keyframes fadeInDown {
   from {
-    transform: translate3d(0, -150px, 0);
+    opacity: 0;
+    transform: translateY(-150px);
   }
   to {
-    transform: translate3d(0, 0, 0);
+    transform: translateY(0);
     opacity: 1;
   }
 }
 
+@keyframes opacity {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 @keyframes mainBlock {
   0% {
     width: 0%;
@@ -907,6 +955,14 @@ section.dark {
   }
 }
 
+@keyframes typewriterMobile {
+  from {
+    width: 0;
+  }
+  to {
+    width: 35.8em;
+  }
+}
 @keyframes blinkTextCursor {
   from {
     border-right-color: #6e6e6ebf;
